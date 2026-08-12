@@ -1,0 +1,8 @@
+model SessaoEstudo {
+    id String @id @default(uuid())
+    anotacoes String
+    topicoId String
+    topico Topico @relation(fields: [topicoId], references: [id])
+    horarioInicio DateTime @db.Time()
+    horarioFim DateTime @db.Time()
+}

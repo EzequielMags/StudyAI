@@ -1,0 +1,7 @@
+model Meta {
+    id String @id @default(uuid())
+    topicoId String
+    topico Topico @relation(fields: [topicoId], references: [id])
+    horasMeta Float 
+    dataLimite DateTime?
+}

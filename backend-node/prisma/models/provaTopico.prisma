@@ -1,0 +1,9 @@
+model ProvaTopico {
+    provaId String 
+    prova Prova @relation(fields: [provaId], references: [id])
+    topicoId String
+    topico Topico @relation(fields: [topicoId], references: [id])
+    
+    @@id([provaId, topicoId])
+
+}

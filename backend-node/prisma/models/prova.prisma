@@ -1,0 +1,17 @@
+enum Dificuldade {
+    FACIL
+    MEDIO
+    DIFICIL
+}
+
+model Prova {
+    id String @id @default(uuid())
+    materiaId String
+    data DateTime
+    realizada Boolean @default(false)
+    notaFinal Float?
+    provaTopicos ProvaTopico[]
+    dificuldade Dificuldade @default(FACIL) 
+
+    @@index([materiaId])
+}

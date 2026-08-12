@@ -1,0 +1,18 @@
+enum DiaSemana {
+    SEGUNDA
+    TERCA
+    QUARTA
+    QUINTA
+    SEXTA
+    SABADO
+    DOMINGO
+}
+
+model DisponibilidadeEstudo {
+    id String @id @default(uuid())
+    usuarioId String
+    usuario Usuario @relation(fields: [usuarioId], references: [id])
+    diaSemana DiaSemana @default(DOMINGO) 
+    horarioInicio DateTime @db.Time()
+    horarioFim DateTime @db.Time()
+}

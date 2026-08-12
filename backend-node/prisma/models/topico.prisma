@@ -1,0 +1,9 @@
+model Topico {
+    id        String  @id @default(uuid())
+    materiaId String
+    materia   Materia @relation(fields: [materiaId], references: [id])
+    provaTopicos ProvaTopico[]
+    meta Meta[]
+    sessaoEstudo SessaoEstudo[]
+    @@index([materiaId])
+}
