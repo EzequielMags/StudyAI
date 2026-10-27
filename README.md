@@ -1,4 +1,4 @@
-# StudyFlow AI
+# Study AI
 
 Plataforma de organização e acompanhamento de estudos. O objetivo é ajudar estudantes a gerenciar matérias, tópicos, metas, sessões de estudo, provas e disponibilidade semanal — com suporte futuro a recomendações inteligentes via IA.
 
